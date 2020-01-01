@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>{{.title}}</title>  
+  <link href="https://vjs.zencdn.net/7.0.3/video-js.css" rel="stylesheet">
+  <style text="text/css">
+    .video-js{
+      margin: auto;
+    }
+    .channel{
+      margin: auto;
+      width: 1080px;
+    }
+    .channel h4{
+      margin:auto;
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="channel">
+    <h4>{{.channel}}</h4> 
+  </div>
+  <div>
+    <video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="1080" height="708" data-setup='{}'>   
+      <source id="source" src={{.url}}  type="application/x-mpegURL">  
+    </video>  
+  </div>
+  
+</body>  
+  <script src="https://vjs.zencdn.net/7.0.3/video.js"></script>
+</html>
